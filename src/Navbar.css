@@ -1,0 +1,33 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+  }
+  
+  .navbar-title {
+    font-size: 30px;
+  }
+  
+  .nav-menu {
+    display: flex;
+  }
+  
+  .nav-menu-item {
+    padding: 10px;
+  }
+  .nav-menu-item:hover {
+    background: #111;
+  }
+  
+  @media all and (max-width: 650px) {
+    .navbar {
+      flex-direction: column;
+    }
+    .nav-menu {
+      flex-direction: column;
+    }
+  }
+  

@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: roboto;
+  background: #ecf0f1;
+}
+
+.App  {
+  display: flex;
+}
+
+@media all and (max-width: 650px) {
+  .App {
+    flex-direction: column;
+    align-items: center;
+  }
+}
