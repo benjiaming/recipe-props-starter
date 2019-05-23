@@ -4,7 +4,7 @@ import './Recipe.css';
 
 class Recipe extends Component {
     render() {
-        const { title, img, instructions } = this.props;
+        const { title, img, instructions, id, onDelete } = this.props;
         const ingredients = this.props.ingredients.map((ing, index) => (
             <li key={index}>{ing}</li>
         ));
@@ -19,6 +19,7 @@ class Recipe extends Component {
                     <ul>{ingredients}</ul>
                     <h4>Instructions:</h4>
                     <p>{instructions}</p>
+                    <button type="button" onClick={() => onDelete(id)}>DELETE</button>
                 </div>                    
             </div>                
         )
@@ -29,5 +30,7 @@ Recipe.propTypes = {
     img: PropTypes.string.isRequired,
     instructions: PropTypes.string.isRequired,
     ingredients: PropTypes.array.isRequired,
+    id: PropTypes.number.isRequired,
+    onDelete: PropTypes.func.isRequired,
 };
 export default Recipe;
